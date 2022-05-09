@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-RUN apt update && apt -y upgrade && apt -y install tzdata
+RUN apt update && apt -y install tzdata
 ENV TZ=Asia/Tokyo
 
 RUN apt -y install python3 python3-pip libgl1-mesa-dev libgtk2.0-dev
