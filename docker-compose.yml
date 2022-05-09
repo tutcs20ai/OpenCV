@@ -1,0 +1,15 @@
+version: "3"
+services:
+  opencv:
+    build: ./
+    image: opencv
+    container_name: opencv
+    volumes:
+      - ./code:/code
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    devices:
+      - /dev/video0:/dev/video0:mwr
+    working_dir: /code
+    environment:
+      DISPLAY: unix$DISPLAY
+    tty: true
